@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.main-header {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    border-bottom: 2px solid #444;
+}
+
+.branding h1 {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+nav ul li a:hover {
+    color: #f0a500;
+}
+
+/* Assignments Section */
+.assignments-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.assignments-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Filter and Sort Options */
+.filters {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.filters label {
+    font-size: 16px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.filters select {
+    padding: 8px 12px;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Assignment Cards */
+.assignments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.assignment-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.assignment-card:hover {
+    transform: translateY(-5px);
+}
+
+.assignment-card h3 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.assignment-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.assignment-card .due-date, .assignment-card .subject {
+    font-weight: bold;
+    color: #222;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}

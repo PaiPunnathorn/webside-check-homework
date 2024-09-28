@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View and manage your homework assignments effectively.">
+    <title>Assignments | Homework Management System</title>
+    <link rel="stylesheet" href="assignments.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="branding">
+                <h1>การจัดการการบ้านโรงเรียนมัธยมบ้านบางกะปิมัธยม4</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Assignments Section -->
+    <section class="assignments-section">
+        <div class="container">
+            <h2>งานของคุณ</h2>
+
+            <!-- Filter and Sort Options -->
+            <div class="filters">
+                <label for="sort">Sort by:</label>
+                <select id="sort">
+                    <option value="due-date">Due Date</option>
+                    <option value="subject">Subject</option>
+                </select>
+                
+                <label for="filter-subject">Filter by Subject:</label>
+                <select id="filter-subject">
+                    <option value="all">All Subjects</option>
+                    <option value="math">Math</option>
+                    <option value="science">Science</option>
+                    <option value="english">English</option>
+                </select>
+            </div>
+
+            <!-- Assignment Cards -->
+            <div class="assignments-grid">
+                <div class="assignment-card" data-subject="science" data-due-date="2024-09-27">
+                    <h3>งานฟิสิกส์ #1</h3>
+                    <p>ส่งสมุดวิชาฟิสิกส์+แปปฝึกวิชาฟิสิกส์</p>
+                    <p class="due-date"><strong>วัน-เดือน-ปี:</strong> 27-09-67</p>
+                    <p class="subject"><strong>วิชา:</strong> ฟิสิกส์</p>
+                </div>
+                <div class="assignment-card" data-subject="chemistry" data-due-date="2024-09-27">
+                    <h3>เคมี#1</h3>
+                    <p>ส่งแปปฝึก1-78หน้า.</p>
+                    <p class="due-date"><strong>วัน-เดือน-ปี:</strong> 27-09-67</p>
+                    <p class="subject"><strong>วิชา:</strong> เคมี</p>
+                </div>
+                <div class="assignment-card" data-subject="english" data-due-date="2024-09-27">
+                    <h3>อังกฤษ#1</h3>
+                    <p>พรีเซ้น "What I have studied in this class"</p>
+                    <p class="due-date"><strong>วัน-เดือน-ปี:</strong> 27-09-67</p>
+                    <p class="subject"><strong>วิชา:</strong> อังกฤษ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Homework Management System | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Link to JavaScript -->
+    <script src="assignments.js"></script>
+</body>
+</html>
