@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+h1, h2 {
+    margin: 0;
+    color: #fff;
+}
+
+/* Home Bar (Navigation Bar) */
+.nav-bar {
+    margin-top: 10px;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-bar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-bar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-bar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.assignments-section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Filter Options */
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters label, .filters input, .filters select {
+    margin: 0 10px;
+}
+
+/* Assignment Cards */
+.assignments-grid {
+    margin-top: 20px;
+}
+
+.assignment-group {
+    margin-bottom: 30px;
+}
+/* การปรับแต่งการแสดงกลุ่มการบ้าน */
+.assignment-group {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+.assignment-group h3 {
+    color: #333;
+    text-align: left;
+}
+
+/* การปรับแต่งการ์ดการบ้าน */
+.assignment-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.assignment-card h4 {
+    color: #444;
+}
+
+.assignment-card p {
+    margin: 5px 0;
+}
+
+.assignment-card .due-date {
+    font-weight: bold;
+}
+
+.assignment-card .subject {
+    color: #666;
+}

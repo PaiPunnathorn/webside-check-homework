@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Homework assignments for each class in one day, sorted by date.">
+    <title>Class Assignments</title>
+    <link rel="stylesheet" href="workinclass.css">
+    <link href="https://fonts.googleapish.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section with Home Bar -->
+    <header class="main-header">
+        <div class="container">
+            <div class="branding">
+                <h1>Homework Management System</h1>
+            </div>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="assignments.html">HomeWork</a></li>
+                    <li><a href="workinclass.html">WorkInClass</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Assignments Section -->
+    <section class="assignments-section">
+        <div class="container">
+            <h2>Today's Assignments</h2>
+
+            <!-- Filter Options -->
+            <div class="filters">
+                <label for="filter-date">Filter by Date:</label>
+                <input type="date" id="filter-date">
+
+                <label for="filter-subject">Filter by Subject:</label>
+                <select id="filter-subject">
+                    <option value="all">All Subjects</option>
+                    <option value="math">Math</option>
+                    <option value="physic">Physic</option>
+                    <option value="chemistry">Chemistry</option>
+                    <option value="biology">Biology</option>
+                    <option value="additionalmath">Additional Math</option>
+                    <option value="thai">Thai</option>
+                    <option value="history">History</option>
+                    <option value="social">Social</option>
+                    <option value="english">English</option>
+                    <option value="EnglishSpeakingandlistening">English Speaking and listening</option>
+                    <option value="ComputationalScience">Computational Science</option>
+                </select>
+            </div>
+
+            <!-- Assignment Cards Container -->
+            <div class="assignments-grid" id="assignments-grid">
+                <!-- Assignments will be dynamically populated here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Homework Management System | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="workinclass.js"></script>
+</body>
+</html>
