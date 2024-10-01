@@ -58,6 +58,8 @@ nav ul li a:hover {
     padding: 100px 0;
     background: linear-gradient(135deg, #222 50%, #555 50%);
     color: white;
+    flex-wrap: wrap; /* Adjust layout to wrap for smaller screens */
+    text-align: center;
 }
 
 .hero-content {
@@ -114,6 +116,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    flex-wrap: wrap; /* Make grid responsive for smaller screens */
 }
 
 .feature-item {
@@ -122,7 +125,7 @@ nav ul li a:hover {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    flex: 1;
+    flex: 1 1 30%; /* Allow items to shrink and grow */
     transition: transform 0.3s;
 }
 
@@ -158,4 +161,67 @@ footer {
 footer p {
     margin: 0;
     font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center; /* Center text for mobile */
+    }
+
+    .hero-image {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    nav ul {
+        float: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .features-grid {
+        flex-direction: column; /* Stack features vertically on smaller screens */
+    }
+
+    .feature-item {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 50px 0;
+    }
+
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .feature-item {
+        padding: 20px;
+    }
 }
