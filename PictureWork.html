@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View and manage your homework assignments effectively.">
+    <title>Assignments | Homework Management System</title>
+    <link rel="stylesheet" href="PictureWork.Css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="branding">
+                <h1>การจัดการการบ้านโรงเรียนมัธยมบ้านบางกะปิมัธยม4</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                    <li><a href="workinclass.html">WorkInClass</a></li>
+                    <li><a href="PictureWork.html">PitureWork</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Assignments Section -->
+    <section class="assignments-section">
+        <div class="container">
+            <h2>งานของคุณ</h2>
+
+            <!-- Filter and Sort Options -->
+            <div class="filters">
+                <label for="filter-subject">Filter by Subject:</label>
+                <select id="filter-subject">
+                    <option value="all">All Subjects</option>
+                    <option value="math">Math</option>
+                    <option value="physic">Physic</option>
+                    <option value="chemistry">Chemistry</option>
+                    <option value="biology">Biology</option>
+                    <option value="additionalmath">Additional Math</option>
+                    <option value="thai">Thai</option>
+                    <option value="history">History</option>
+                    <option value="social">Social</option>
+                    <option value="english">English</option>
+                    <option value="EnglishSpeakingandlistening">English Speaking and listening</option>
+                    <option value="ComputationalScience">Computational Science</option>
+                </select>
+
+                <label for="filter-date">Filter by Date:</label>
+                <input type="date" id="filter-date">
+            </div>
+
+            <!-- Assignment Cards by Date -->
+            <div class="date-section">
+                <h3>30-09-67</h3>
+                <div class="assignments-grid">
+                    <div class="assignment-card" data-subject="physics" data-date="2024-09-30">
+                        <img src="images/physics-homework.jpg" alt="Physics Homework" class="assignment-image">
+                        <div class="card-info">
+                            <p class="subject"><strong>วิชา:</strong> ฟิสิกส์</p>
+                            <p class="due-date"><strong>เวลา:</strong> 10:00 น.</p>
+                        </div>
+                    </div>
+                    <div class="assignment-card" data-subject="chemistry" data-date="2024-09-30">
+                        <img src="images/chemistry-homework.jpg" alt="Chemistry Homework" class="assignment-image">
+                        <div class="card-info">
+                            <p class="subject"><strong>วิชา:</strong> เคมี</p>
+                            <p class="due-date"><strong>เวลา:</strong> 11:30 น.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="date-section">
+                <h3>01-10-67</h3>
+                <div class="assignments-grid">
+                    <div class="assignment-card" data-subject="english" data-date="2024-10-01">
+                        <img src="images/english-homework.jpg" alt="English Homework" class="assignment-image">
+                        <div class="card-info">
+                            <p class="subject"><strong>วิชา:</strong> อังกฤษ</p>
+                            <p class="due-date"><strong>เวลา:</strong> 09:00 น.</p>
+                        </div>
+                    </div>
+                    <div class="assignment-card" data-subject="math" data-date="2024-10-01">
+                        <img src="images/math-homework.jpg" alt="Math Homework" class="assignment-image">
+                        <div class="card-info">
+                            <p class="subject"><strong>วิชา:</strong> คณิตศาสตร์</p>
+                            <p class="due-date"><strong>เวลา:</strong> 10:30 น.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Homework Management System | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Modal and Filter Functionality -->
+    <script src="PitureWork.js"></script>
+</body>
+</html>

@@ -2,11 +2,9 @@
 
 // ข้อมูลการบ้านตัวอย่าง (สามารถปรับแต่งหรือดึงข้อมูลจากฐานข้อมูลในอนาคต)
 const assignments = [
-    { id: 1, subject: "math", title: "Math Homework #1", details: "Complete exercises 1-20 on page 15.", dueDate: "2024-10-01" },
-    { id: 2, subject: "physic", title: "Science Report #1", details: "Write a Newton Rule.", dueDate: "2024-09-30" },
-    { id: 3, subject: "english", title: "Essay #1", details: "Write an essay on 'My Summer Vacation'.", dueDate: "2024-09-29" },
-    { id: 4, subject: "physic", title: "Math Homework #2", details: "Complete exercises 21-40 on page 16.", dueDate: "2024-10-02" },
-    { id: 5, subject: "english", title: "Grammar Exercise #1", details: "Complete grammar exercises on page 10-15.", dueDate: "2024-09-29" }
+    { id: 1, subject: "chemistry", title: "หัวข้อที่เรียเคมี #1", details: "เรียนเรื่อง พันธะโคเวเลนต์ และ เขียนโครงสร้างลิวอิสในแปปฝึกหัด.", dueDate: "2024-09-01" },
+    { id: 2, subject: "physic", title: "หัวข้อที่เรียนฟิสิกส์ #1", details: "เรียนเรื่อง สมดุลกล และ ทบทวนการหา ΣF หาเพื่มเติม สามเหลื่ยมแทนแรง กับ ทฤษฏีลามี.", dueDate: "2024-09-01" },
+    { id: 3, subject: "Englishreadingandwriting", title: "อังกฤษอ่าน-เขียน #1", details: "จดคำศัพย์ที่ต้องรู้จากเรื่อง Humans in Space ในLine.", dueDate: "2024-09-01" },
 ];
 
 // การแสดงข้อมูลการบ้านในหน้าจอ

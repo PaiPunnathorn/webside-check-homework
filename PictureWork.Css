@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.main-header {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    border-bottom: 2px solid #444;
+}
+
+.branding h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+nav ul li a:hover {
+    color: #f0a500;
+}
+
+/* Assignments Section */
+.assignments-section h2 {
+    font-size: 36px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.date-section {
+    margin: 40px 0;
+}
+
+.date-section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Assignments Grid */
+.assignments-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.assignment-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.assignment-card:hover {
+    transform: translateY(-5px);
+}
+
+.assignment-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.card-info .subject,
+.card-info .due-date {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        float: none;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .assignments-grid {
+        flex-direction: column;
+    }
+
+    .assignment-card {
+        min-width: 100%;
+    }
+}
