@@ -6,7 +6,7 @@
     <meta name="description" content="Homework assignments for each class in one day, sorted by date.">
     <title>Class Assignments</title>
     <link rel="stylesheet" href="workinclass.css">
-    <link href="https://fonts.googleapish.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header Section with Home Bar -->
@@ -34,9 +34,6 @@
             <div class="filters">
                 <label for="filter-date">Filter by Date:</label>
                 <input type="date" id="filter-date">
-                <button onclick="filterAssignments()">ค้นหา</button>
-
-                <script src="workinclass.js"></script>
 
                 <label for="filter-subject">Filter by Subject:</label>
                 <select id="filter-subject">
@@ -56,10 +53,7 @@
             </div>
 
             <!-- Assignment Cards Container -->
-            <div class="assignments-grid" id="assignments-grid">
-                <ul id="assignment-list"></ul>
-
-            </div>
+            <div class="assignments-grid" id="assignments-grid"></div>
         </div>
     </section>
 
@@ -70,5 +64,7 @@
         </div>
     </footer>
 
+    <!-- JavaScript -->
+    <script src="workinclass.js"></script>
 </body>
 </html>
