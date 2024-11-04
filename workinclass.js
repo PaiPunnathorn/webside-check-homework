@@ -12,10 +12,27 @@ const assignments = [
     { id: 10, subject: "english", title: "หัวข้อที่เรียนภาษาอังกฤษ #1", details: "แบบฝึกทำหน้า 5ข้อ1, 8ข้อ2และ3.", dueDate: "2024-11-04" },
 ];
 
-// ฟังก์ชันแสดงข้อมูลการบ้านในหน้าจอ
-function displayAssignments(filteredAssignments) {
-    const assignmentsGrid = document.getElementById("assignments-grid");
-    assignmentsGrid.innerHTML = ""; // ล้างข้อมูลเก่าออกก่อน
+// จัดกลุ่มการบ้านตามวันที่
+    const groupedByDate = filteredAssignments.reduce((acc, assignment) => {
+        const date = assignment.dueDate;
+        if (!acc[date]) {
+            acc[date] = [];
+        }
+        acc[date].push(assignment);
+        return acc;
+    }, {});
+
+    // สร้างและแสดงกลุ่มการบ้าน
+    for (const [date, assignments] of Object.entries(groupedByDate)) {
+        // สร้างกลุ่มการบ้านตามวันที่
+        const assignmentGroup = document.createElement("div");
+        assignmentGroup.classList.add("assignment-group");
+
+        // แสดงหัวข้อวันที่
+        const dateHeading = document.createElement("h3");
+        dateHeading.textContent = date;
+        assignmentGroup.appendChild(dateHeading);
+
 
     filteredAssignments.forEach(assignment => {
         const assignmentCard = document.createElement("div");
