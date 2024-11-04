@@ -65,9 +65,8 @@ function filterAssignments() {
     }
 
     displayAssignments(filteredAssignments);
-}
 
-// ฟังก์ชันแสดงข้อมูลการบ้านในหน้าจอ (จัดกลุ่มตามวันที่)
+    // ฟังก์ชันแสดงข้อมูลการบ้านในหน้าจอ (จัดกลุ่มตามวันที่)
 function displayAssignments(filteredAssignments) {
     const assignmentsGrid = document.getElementById("assignments-grid");
     assignmentsGrid.innerHTML = ""; // ล้างข้อมูลเก่าออกก่อน
@@ -110,6 +109,9 @@ function displayAssignments(filteredAssignments) {
         assignmentsGrid.appendChild(assignmentGroup);
     }
 }
+
+}
+
 
 // Event Listeners สำหรับการกรอง
 document.getElementById("filter-date").addEventListener("change", filterAssignments);
