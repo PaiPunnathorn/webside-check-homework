@@ -63,8 +63,6 @@ function filterAssignments() {
     if (filterSubject !== "all") {
         filteredAssignments = filteredAssignments.filter(assignment => assignment.subject === filterSubject);
     }
-
-    displayAssignments(filteredAssignments);
 }
 
 
