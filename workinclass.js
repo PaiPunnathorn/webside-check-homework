@@ -111,12 +111,12 @@ function filterAssignments() {
 
     // กรองตามวันที่
     if (filterDate) {
-        filteredAssignments = filteredAssignments.filter(assignment => assignment.dueDate === filterDate);
+        filteredAssignments = filteredAssignments.filter(assignments => assignment.dueDate === filterDate);
     }
 
     // กรองตามวิชา
     if (filterSubject !== "all") {
-        filteredAssignments = filteredAssignments.filter(assignment => assignment.subject === filterSubject);
+        filteredAssignments = filteredAssignments.filter(assignments => assignment.subject === filterSubject);
     }
 
     displayAssignments(filteredAssignments);
