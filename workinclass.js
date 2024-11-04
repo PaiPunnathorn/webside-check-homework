@@ -12,27 +12,10 @@ const assignments = [
     { id: 10, subject: "english", title: "หัวข้อที่เรียนภาษาอังกฤษ #1", details: "แบบฝึกทำหน้า 5ข้อ1, 8ข้อ2และ3.", dueDate: "2024-11-04" },
 ];
 
-// จัดกลุ่มการบ้านตามวันที่
-    const groupedByDate = filteredAssignments.reduce((acc, assignment) => {
-        const date = assignment.dueDate;
-        if (!acc[date]) {
-            acc[date] = [];
-        }
-        acc[date].push(assignment);
-        return acc;
-    }, {});
-
-    // สร้างและแสดงกลุ่มการบ้าน
-    for (const [date, assignments] of Object.entries(groupedByDate)) {
-        // สร้างกลุ่มการบ้านตามวันที่
-        const assignmentGroup = document.createElement("div");
-        assignmentGroup.classList.add("assignment-group");
-
-        // แสดงหัวข้อวันที่
-        const dateHeading = document.createElement("h3");
-        dateHeading.textContent = date;
-        assignmentGroup.appendChild(dateHeading);
-
+// ฟังก์ชันแสดงข้อมูลการบ้านในหน้าจอ
+function displayAssignments(filteredAssignments) {
+    const assignmentsGrid = document.getElementById("assignments-grid");
+    assignmentsGrid.innerHTML = ""; // ล้างข้อมูลเก่าออกก่อน
 
     filteredAssignments.forEach(assignment => {
         const assignmentCard = document.createElement("div");
@@ -63,8 +46,9 @@ function filterAssignments() {
     if (filterSubject !== "all") {
         filteredAssignments = filteredAssignments.filter(assignment => assignment.subject === filterSubject);
     }
-}
 
+    displayAssignments(filteredAssignments);
+}
 
 // Event Listeners สำหรับการกรอง
 document.getElementById("filter-date").addEventListener("change", filterAssignments);
@@ -72,46 +56,3 @@ document.getElementById("filter-subject").addEventListener("change", filterAssig
 
 // เริ่มต้นแสดงการบ้านทั้งหมดเมื่อโหลดหน้า
 displayAssignments(assignments);
-// ฟังก์ชันแสดงข้อมูลการบ้านในหน้าจอ (จัดกลุ่มตามวันที่)
-function displayAssignments(filteredAssignments) {
-    const assignmentsGrid = document.getElementById("assignments-grid");
-    assignmentsGrid.innerHTML = ""; // ล้างข้อมูลเก่าออกก่อน
-
-    // จัดกลุ่มการบ้านตามวันที่
-    const groupedByDate = filteredAssignments.reduce((acc, assignment) => {
-        const date = assignment.dueDate;
-        if (!acc[date]) {
-            acc[date] = [];
-        }
-        acc[date].push(assignment);
-        return acc;
-    }, {});
-
-    // แสดงการบ้านตามวันที่ (จัดกลุ่มตามวันที่ใหญ่)
-    for (const [date, assignments] of Object.entries(groupedByDate)) {
-        // สร้างกลุ่มการบ้านตามวันที่
-        const assignmentGroup = document.createElement("div");
-        assignmentGroup.classList.add("assignment-group");
-
-        // เพิ่มหัวข้อวันที่ใหญ่
-        const dateHeading = document.createElement("h3");
-        dateHeading.textContent = `Due Date: ${date}`;
-        assignmentGroup.appendChild(dateHeading);
-
-        // สร้างการ์ดการบ้านแต่ละรายการในกลุ่มวันที่
-        assignments.forEach(assignment => {
-            const assignmentCard = document.createElement("div");
-            assignmentCard.classList.add("assignment-card");
-
-            assignmentCard.innerHTML = `
-                <h4>${assignment.title}</h4>
-                <p>${assignment.details}</p>
-                <p><strong>Subject:</strong> ${assignment.subject}</p>
-            `;
-
-            assignmentGroup.appendChild(assignmentCard);
-        });
-
-        assignmentsGrid.appendChild(assignmentGroup);
-    }
-}
