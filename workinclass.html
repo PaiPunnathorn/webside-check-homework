@@ -35,7 +35,8 @@
                 <label for="filter-date">Filter by Date:</label>
                 <input type="date" id="filter-date">
                 <button onclick="filterAssignments()">ค้นหา</button>
-                <ul id="assignment-list"></ul>
+
+                <script src="workinclass.js"></script>
 
                 <label for="filter-subject">Filter by Subject:</label>
                 <select id="filter-subject">
@@ -56,6 +57,7 @@
 
             <!-- Assignment Cards Container -->
             <div class="assignments-grid" id="assignments-grid">
+                <ul id="assignment-list"></ul>
 
             </div>
         </div>
@@ -68,6 +70,5 @@
         </div>
     </footer>
 
-    <script src="workinclass.js"></script>
 </body>
 </html>
