@@ -14,15 +14,43 @@ const assignments = [
     { id: 10, subject: "english", title: "หัวข้อที่เรียนภาษาอังกฤษ #1", details: "แบบฝึกทำหน้า 5ข้อ1, 8ข้อ2และ3.", dueDate: "04-11-2024" },
 ];
 
-// แปลงวันที่ให้อยู่ในรูป Date Object
+// แปลงวันที่ให้เป็น Date Object
 const updatedAssignments = assignments.map(assignment => {
     const [day, month, year] = assignment.dueDate.split("-");
-    const formattedDate = new Date(year, month - 1, day); // month - 1 เพราะเดือนใน Date เริ่มจาก 0
+    const formattedDate = new Date(year, month - 1, day);
     return { ...assignment, dueDate: formattedDate };
 });
 
-console.log(updatedAssignments);
+// ฟังก์ชันกรองงานตามวันที่กำหนดส่ง
+function filterAssignments() {
+    const filterDate = document.getElementById("filter-date").value;
+    if (!filterDate) {
+        alert("กรุณาเลือกวันที่ก่อน");
+        return;
+    }
 
+            // แปลงวันที่ที่ได้จาก input ให้เป็น Date Object
+            const selectedDate = new Date(filterDate);
+            
+            // กรองงานตามวันที่กำหนดส่งที่ตรงกับวันที่เลือก
+            const filteredAssignments = updatedAssignments.filter(assignment =>
+                assignment.dueDate.toDateString() === selectedDate.toDateString()
+            );
+            
+            // แสดงผลลัพธ์
+            const assignmentList = document.getElementById("assignment-list");
+            assignmentList.innerHTML = ""; // ล้างรายการก่อน
+            if (filteredAssignments.length > 0) {
+                filteredAssignments.forEach(assignment => {
+                    const listItem = document.createElement("li");
+                    listItem.textContent = `${assignment.title} - ${assignment.details}`;
+                    assignmentList.appendChild(listItem);
+                });
+            } else {
+                assignmentList.innerHTML = "<li>ไม่มีงานที่กำหนดส่งในวันที่เลือก</li>";
+            }
+        }
+    
 // การแสดงข้อมูลการบ้านในหน้าจอ
 function displayAssignments(filteredAssignments) {
     const assignmentsGrid = document.getElementById("assignments-grid");
