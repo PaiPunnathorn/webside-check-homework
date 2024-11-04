@@ -67,6 +67,50 @@ function filterAssignments() {
     displayAssignments(filteredAssignments);
 }
 
+// ฟังก์ชันแสดงข้อมูลการบ้านในหน้าจอ (จัดกลุ่มตามวันที่)
+function displayAssignments(filteredAssignments) {
+    const assignmentsGrid = document.getElementById("assignments-grid");
+    assignmentsGrid.innerHTML = ""; // ล้างข้อมูลเก่าออกก่อน
+
+    // จัดกลุ่มการบ้านตามวันที่
+    const groupedByDate = filteredAssignments.reduce((acc, assignment) => {
+        const date = assignment.dueDate;
+        if (!acc[date]) {
+            acc[date] = [];
+        }
+        acc[date].push(assignment);
+        return acc;
+    }, {});
+
+    // แสดงการบ้านตามวันที่ (จัดกลุ่มตามวันที่ใหญ่)
+    for (const [date, assignments] of Object.entries(groupedByDate)) {
+        // สร้างกลุ่มการบ้านตามวันที่
+        const assignmentGroup = document.createElement("div");
+        assignmentGroup.classList.add("assignment-group");
+
+        // เพิ่มหัวข้อวันที่ใหญ่
+        const dateHeading = document.createElement("h3");
+        dateHeading.textContent = `Due Date: ${date}`;
+        assignmentGroup.appendChild(dateHeading);
+
+        // สร้างการ์ดการบ้านแต่ละรายการในกลุ่มวันที่
+        assignments.forEach(assignment => {
+            const assignmentCard = document.createElement("div");
+            assignmentCard.classList.add("assignment-card");
+
+            assignmentCard.innerHTML = `
+                <h4>${assignment.title}</h4>
+                <p>${assignment.details}</p>
+                <p><strong>Subject:</strong> ${assignment.subject}</p>
+            `;
+
+            assignmentGroup.appendChild(assignmentCard);
+        });
+
+        assignmentsGrid.appendChild(assignmentGroup);
+    }
+}
+
 // Event Listeners สำหรับการกรอง
 document.getElementById("filter-date").addEventListener("change", filterAssignments);
 document.getElementById("filter-subject").addEventListener("change", filterAssignments);
