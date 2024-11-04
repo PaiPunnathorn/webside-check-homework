@@ -24,7 +24,7 @@ function displayAssignments(filteredAssignments) {
         assignmentCard.innerHTML = `
             <h4>${assignment.title}</h4>
             <p>${assignment.details}</p>
-            <p><strong>Due Date:</strong> ${assignment.dueDate}</p>
+            <p><strong>Date:</strong> ${assignment.dueDate}</p>
             <p><strong>Subject:</strong> ${assignment.subject}</p>
         `;
 
