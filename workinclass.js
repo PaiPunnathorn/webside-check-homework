@@ -66,7 +66,7 @@ function displayAssignments(filteredAssignments) {
         if (assignment.dueDate !== currentDueDate) {
             currentDueDate = assignment.dueDate; // อัปเดตวันที่ปัจจุบัน
             const dateHeader = document.createElement("h3"); // สร้างหัวข้อใหญ่สำหรับวันกำหนดส่ง
-            dateHeader.textContent = `Due Date: ${currentDueDate}`;
+            dateHeader.textContent = `Date: ${currentDueDate}`;
             assignmentsGrid.appendChild(dateHeader); // เพิ่มหัวข้อวันกำหนดส่งในหน้าจอ
         }
 
