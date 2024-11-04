@@ -72,6 +72,8 @@ function filterAssignments() {
 document.getElementById("filter-date").addEventListener("change", filterAssignments);
 document.getElementById("filter-subject").addEventListener("change", filterAssignments);
 
+// เริ่มต้นแสดงการบ้านทั้งหมดเมื่อโหลดหน้า
+displayAssignments(assignments);
 // ฟังก์ชันแสดงข้อมูลการบ้านในหน้าจอ (จัดกลุ่มตามวันที่)
 function displayAssignments(filteredAssignments) {
     const assignmentsGrid = document.getElementById("assignments-grid");
