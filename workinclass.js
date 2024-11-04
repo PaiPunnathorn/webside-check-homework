@@ -54,5 +54,35 @@ function filterAssignments() {
 document.getElementById("filter-date").addEventListener("change", filterAssignments);
 document.getElementById("filter-subject").addEventListener("change", filterAssignments);
 
+// ฟังก์ชันแสดงข้อมูลการบ้านในหน้าจอ พร้อมเพิ่มหัวข้อใหญ่ตามวันที่
+function displayAssignments(filteredAssignments) {
+    const assignmentsGrid = document.getElementById("assignments-grid");
+    assignmentsGrid.innerHTML = ""; // ล้างข้อมูลเก่าออกก่อน
+
+    let currentDueDate = ""; // ตัวแปรเก็บวันที่กำหนดส่งล่าสุดที่แสดง
+
+    filteredAssignments.forEach(assignment => {
+        // ถ้าวันที่กำหนดส่งเปลี่ยนไปจากข้อมูลก่อนหน้า ให้สร้างหัวข้อใหม่
+        if (assignment.dueDate !== currentDueDate) {
+            currentDueDate = assignment.dueDate; // อัปเดตวันที่ปัจจุบัน
+            const dateHeader = document.createElement("h3"); // สร้างหัวข้อใหญ่สำหรับวันกำหนดส่ง
+            dateHeader.textContent = `Due Date: ${currentDueDate}`;
+            assignmentsGrid.appendChild(dateHeader); // เพิ่มหัวข้อวันกำหนดส่งในหน้าจอ
+        }
+
+        // สร้าง card สำหรับแสดงข้อมูลการบ้าน
+        const assignmentCard = document.createElement("div");
+        assignmentCard.classList.add("assignment-card");
+
+        assignmentCard.innerHTML = `
+            <h4>${assignment.title}</h4>
+            <p>${assignment.details}</p>
+            <p><strong>Subject:</strong> ${assignment.subject}</p>
+        `;
+
+        assignmentsGrid.appendChild(assignmentCard); // เพิ่ม card ในหน้าจอ
+    });
+}
+
 // เริ่มต้นแสดงการบ้านทั้งหมดเมื่อโหลดหน้า
 displayAssignments(assignments);
