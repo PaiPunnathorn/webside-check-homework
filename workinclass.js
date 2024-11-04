@@ -65,8 +65,14 @@ function filterAssignments() {
     }
 
     displayAssignments(filteredAssignments);
+}
 
-    // ฟังก์ชันแสดงข้อมูลการบ้านในหน้าจอ (จัดกลุ่มตามวันที่)
+
+// Event Listeners สำหรับการกรอง
+document.getElementById("filter-date").addEventListener("change", filterAssignments);
+document.getElementById("filter-subject").addEventListener("change", filterAssignments);
+
+// ฟังก์ชันแสดงข้อมูลการบ้านในหน้าจอ (จัดกลุ่มตามวันที่)
 function displayAssignments(filteredAssignments) {
     const assignmentsGrid = document.getElementById("assignments-grid");
     assignmentsGrid.innerHTML = ""; // ล้างข้อมูลเก่าออกก่อน
@@ -109,13 +115,3 @@ function displayAssignments(filteredAssignments) {
         assignmentsGrid.appendChild(assignmentGroup);
     }
 }
-
-}
-
-
-// Event Listeners สำหรับการกรอง
-document.getElementById("filter-date").addEventListener("change", filterAssignments);
-document.getElementById("filter-subject").addEventListener("change", filterAssignments);
-
-// เริ่มต้นแสดงการบ้านทั้งหมดเมื่อโหลดหน้า
-displayAssignments(assignments);
