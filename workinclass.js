@@ -91,3 +91,8 @@ document.getElementById("filter-subject").addEventListener("change", filterAssig
 
 // เริ่มต้นแสดงการบ้านทั้งหมดเมื่อโหลดหน้า
 displayAssignments(assignments);
+
+function assignments() {
+    const date = document.getElementById("filter-date").value;
+    document.getElementById("assignments").innerText = date;
+}
