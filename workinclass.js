@@ -11,6 +11,10 @@ const assignments = [
     { id: 9, subject: "Technology", title: "หัวข้อที่เรียนออกแบบเทคโนโลยี #1", details: "เขียนเกณฑ์การให้คะแนน.", dueDate: "2024-11-04" },
     { id: 10, subject: "english", title: "หัวข้อที่เรียนภาษาอังกฤษ #1", details: "แบบฝึกทำหน้า 5ข้อ1, 8ข้อ2และ3.", dueDate: "2024-11-04" },
     { id: 11, subject: "Englishcommunication", title: "หัวข้อที่เรียนภาษาอังกฤษสื่อสาร #1", details: "จดVerbs of MovementในLineที่ครูส่งให้.", dueDate: "2024-11-05" },
+    { id: 12, subject: "biology", title: "หัวข้อที่เรียนชีววิทยา #2", details: "เรียนเรื่องพันธุกรรม, Cell division , โครโมโซม.", dueDate: "2024-11-05" },
+    { id: 13, subject: "additionalmath", title: "หัวข้อที่เรียนคณิตศาสตร์เพิ่มเติม #2", details: "เรียนเรื่องการพิจารณาฟังก์ชันเพิ่มฟังก็ชันลด 2 วิธีแทนค่ากับใช้นิยาม.", dueDate: "2024-11-05" },
+    { id: 14, subject: "Guidance", title: "หัวข้อที่เรียนแนะแนว #1", details: "จดVerbs of MovementในLineที่ครูส่งให้.", dueDate: "2024-11-05" },
+    
 ];
 
 // ฟังก์ชันแสดงข้อมูลการบ้านในหน้าจอ
