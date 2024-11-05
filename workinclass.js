@@ -14,7 +14,9 @@ const assignments = [
     { id: 12, subject: "biology", title: "หัวข้อที่เรียนชีววิทยา #2", details: "เรียนเรื่องพันธุกรรม, Cell division , โครโมโซม.", dueDate: "2024-11-05" },
     { id: 13, subject: "additionalmath", title: "หัวข้อที่เรียนคณิตศาสตร์เพิ่มเติม #2", details: "เรียนเรื่องการพิจารณาฟังก์ชันเพิ่มฟังก็ชันลด 2 วิธีแทนค่ากับใช้นิยาม.", dueDate: "2024-11-05" },
     { id: 14, subject: "Guidance", title: "หัวข้อที่เรียนแนะแนว #1", details: "พูดคุยเรื่องเกณฑ์การให้คะแนน+คุยเรื่องการเรียนต่อระดับมหาลัย.", dueDate: "2024-11-05" },
-    { id: 15, subject: "biologicalsciences", title: "หัวข้อที่เรียนชีววิทยา #1", details: "เรียนเรื่องการวิวัฒนาการ.", dueDate: "2024-11-04" },    
+    { id: 15, subject: "biologicalsciences", title: "หัวข้อที่เรียนวิทยาศาสตร์ชีวภาพ #1", details: "ว่าง.", dueDate: "2024-11-05" },    
+    { id: 16, subject: "physic", title: "หัวข้อที่เรียนฟิสิกส์ #2", details: "การใช้ทฤษฎีลามี ระบบมวลแขวนด้วยเชือก ระบบรอกผูกมวล.", dueDate: "2024-11-05" },    
+    { id: 17, subject: "ProjectSubject", title: "หัวข้อที่เรียนการเขียนเค้าโครงโครงงาน #1", details: "จับกลุ่ม+สุ่มครูที่ปรึกษา.", dueDate: "2024-11-05" },
     
 ];
 
