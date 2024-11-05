@@ -10,6 +10,7 @@ const assignments = [
     { id: 8, subject: "chemistry", title: "หัวข้อที่เรียนเคมี #2", details: "ทำแบบฝึกหน้า79,80ส่งในคาบโดยการเขียนโครงสร้างพันธะแบบลิวอิส.", dueDate: "2024-11-04" },
     { id: 9, subject: "Technology", title: "หัวข้อที่เรียนออกแบบเทคโนโลยี #1", details: "เขียนเกณฑ์การให้คะแนน.", dueDate: "2024-11-04" },
     { id: 10, subject: "english", title: "หัวข้อที่เรียนภาษาอังกฤษ #1", details: "แบบฝึกทำหน้า 5ข้อ1, 8ข้อ2และ3.", dueDate: "2024-11-04" },
+    { id: 11, subject: "Englishcommunication", title: "หัวข้อที่เรียนภาษาอังกฤษสื่อสาร #1", details: "จดVerbs of MovementในLineที่ครูส่งให้.", dueDate: "2024-11-05" },
 ];
 
 // ฟังก์ชันแสดงข้อมูลการบ้านในหน้าจอ
