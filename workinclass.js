@@ -13,7 +13,8 @@ const assignments = [
     { id: 11, subject: "Englishcommunication", title: "หัวข้อที่เรียนภาษาอังกฤษสื่อสาร #1", details: "จดVerbs of MovementในLineที่ครูส่งให้.", dueDate: "2024-11-05" },
     { id: 12, subject: "biology", title: "หัวข้อที่เรียนชีววิทยา #2", details: "เรียนเรื่องพันธุกรรม, Cell division , โครโมโซม.", dueDate: "2024-11-05" },
     { id: 13, subject: "additionalmath", title: "หัวข้อที่เรียนคณิตศาสตร์เพิ่มเติม #2", details: "เรียนเรื่องการพิจารณาฟังก์ชันเพิ่มฟังก็ชันลด 2 วิธีแทนค่ากับใช้นิยาม.", dueDate: "2024-11-05" },
-    { id: 14, subject: "Guidance", title: "หัวข้อที่เรียนแนะแนว #1", details: "จดVerbs of MovementในLineที่ครูส่งให้.", dueDate: "2024-11-05" },
+    { id: 14, subject: "Guidance", title: "หัวข้อที่เรียนแนะแนว #1", details: "พูดคุยเรื่องเกณฑ์การให้คะแนน+คุยเรื่องการเรียนต่อระดับมหาลัย.", dueDate: "2024-11-05" },
+    { id: 15, subject: "biologicalsciences", title: "หัวข้อที่เรียนชีววิทยา #1", details: "เรียนเรื่องการวิวัฒนาการ.", dueDate: "2024-11-04" },    
     
 ];
 
