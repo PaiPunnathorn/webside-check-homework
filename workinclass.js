@@ -17,7 +17,11 @@ const assignments = [
     { id: 15, subject: "biologicalsciences", title: "หัวข้อที่เรียนวิทยาศาสตร์ชีวภาพ #1", details: "ว่าง.", dueDate: "2024-11-05" },    
     { id: 16, subject: "physic", title: "หัวข้อที่เรียนฟิสิกส์ #2", details: "การใช้ทฤษฎีลามี ระบบมวลแขวนด้วยเชือก ระบบรอกผูกมวล.", dueDate: "2024-11-05" },    
     { id: 17, subject: "ProjectSubject", title: "หัวข้อที่เรียนการเขียนเค้าโครงโครงงาน #1", details: "จับกลุ่ม+สุ่มครูที่ปรึกษา.", dueDate: "2024-11-05" },
-    
+    { id: 18, subject: "chemistry", title: "หัวข้อที่เรียนเคมี #3", details: "เรียกชื่อสารประกอบออกไซค์ในพันธะโคเวเลนต์.", dueDate: "2024-11-0ุ6" },
+    { id: 19, subject: "math", title: "หัวข้อที่เรียนเคณิตศาสตร์ #1", details: "การคูณและบวกแบบกรณีเบื้องต้น.", dueDate: "2024-11-0ุ6" },
+    { id: 20, subject: "social", title: "หัวข้อที่เรียนสังคม #2", details: "รัฐสภา การเมือง.", dueDate: "2024-11-ุ06" },
+    { id: 21, subject: "Technology", title: "หัวข้อที่เรียนออกแบบเทคโนโลยี #2", details: "ระบบเทคโนโลยี.", dueDate: "2024-11-ุ06" },
+    { id: 22, subject: "additionalmath", title: "หัวข้อที่เรียนคณิตศาสตร์เพิ่มเติม #3", details: "วาดกราฟ.", dueDate: "2024-11-ุ06" },
 ];
 
 // ฟังก์ชันแสดงข้อมูลการบ้านในหน้าจอ
