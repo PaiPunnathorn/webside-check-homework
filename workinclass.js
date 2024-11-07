@@ -23,6 +23,10 @@ const assignments = [
     { id: 21, subject: "Technology", title: "หัวข้อที่เรียนออกแบบเทคโนโลยี #2", details: "ระบบเทคโนโลยี.", dueDate: "2024-11-06" },
     { id: 22, subject: "additionalmath", title: "หัวข้อที่เรียนคณิตศาสตร์เพิ่มเติม #3", details: "วาดกราฟจากแบบฝึกหัด 1.2ข P.38 ข้อ2.", dueDate: "2024-11-06" },
     { id: 22, subject: "english", title: "หัวข้อที่เรียนภาษาอังกฤษ #2", details: "ทำหน้า10 ข้อ 1 2 4.", dueDate: "2024-11-06" },
+    { id: 23, subject: "thai", title: "หัวข้อที่เรียนภาษาไทย #2", details: "เขียนเส้นทางการเดินทางของนรินทร์.", dueDate: "2024-11-07" },
+    { id: 24, subject: "art", title: "หัวข้อที่เรียนทัศนศิลป์ #1", details: "ครูบอกให้เตรียมของกระดาษArt 100ปอน A3.", dueDate: "2024-11-07" },
+    { id: 25, subject: "additionalmath", title: "หัวข้อที่เรียนคณิตศาสตร์เพิ่มเติม #3", details: "จดงานในfacebookที่ครูส่งให้.", dueDate: "2024-11-07" },
+    
 ];
 
 // ฟังก์ชันแสดงข้อมูลการบ้านในหน้าจอ
